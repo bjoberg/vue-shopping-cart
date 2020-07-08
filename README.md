@@ -1,4 +1,4 @@
-# vue1
+# Vue Shopping Cart
 
 ## Project setup
 ```
