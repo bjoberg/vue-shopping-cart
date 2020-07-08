@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
-    <Cart :totalItems="cart" />
+    <Cart :totalItems="getShoppingCartTotalItems" />
     <Product
       :premium="premium"
       :cart="cart"
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 import NavBar from "./components/NavBar.vue";
 import Product from "./components/Product.vue";
 import Cart from "./components/Cart.vue";
@@ -36,7 +38,8 @@ export default {
     removeFromCart() {
       this.cart -= 1;
     }
-  }
+  },
+  computed: mapGetters(["getShoppingCartTotalItems"])
 };
 </script>
 
