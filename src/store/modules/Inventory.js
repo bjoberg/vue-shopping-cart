@@ -30,19 +30,24 @@ const getters = {
   getInventory: (state) => {
     return state.inventory;
   },
-  getProductById: (state) => (id) => {
+  getInventoryById: (state) => (id) => {
     console.log(id);
     return state.inventory.find(inventory => inventory.id === id)
   },
   getFormattedPrice: (state, getters) => (id) => {
-    const price = getters.getProductById(id).price;
+    const price = getters.getInventoryById(id).price;
     return `$${price}`;
   }
 };
 
 const actions = {};
 
-const mutations = {};
+const mutations = {
+  updateInventoryImage: (state, payload) => {
+    const { id, imageSrc } = payload;
+    state.inventory.find(inventory => inventory.id === id).image = imageSrc;
+  }
+};
 
 export default {
   state,

@@ -21,6 +21,11 @@ export default {
         return [];
       }
     }
+  },
+  methods: {
+    handleUpdateProductImage(imageSrc) {
+      this.$emit("update-product-image", imageSrc);
+    }
   }
 };
 </script>

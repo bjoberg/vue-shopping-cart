@@ -13,7 +13,7 @@
         :itemDetails="product.details"
       />
 
-      <ProductVariants :variants="product.variants" />
+      <ProductVariants :variants="product.variants" @update-product-image="updateInventoryImage" />
 
       <ProductActionButtons @push-to-cart="pushItemToCart" @pop-from-cart="popItemFromCart" />
     </div>
@@ -50,6 +50,12 @@ export default {
     },
     pushItemToCart() {
       this.$store.commit("pushItemToCart", this.product);
+    },
+    updateInventoryImage(imageSrc) {
+      this.$store.commit("updateInventoryImage", {
+        id: this.product.id,
+        imageSrc
+      });
     },
     popItemFromCart() {
       this.$store.commit("popItemFromCart");
