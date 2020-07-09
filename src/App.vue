@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <NavBar />
-    <Cart :totalItems="getShoppingCartLength" />
     <Product
       v-for="inventory in getInventory"
       :key="inventory.id"
@@ -16,14 +15,12 @@ import { mapGetters } from "vuex";
 
 import NavBar from "./components/NavBar.vue";
 import Product from "./components/Product.vue";
-import Cart from "./components/Cart.vue";
 
 export default {
   name: "App",
   components: {
     NavBar,
-    Product,
-    Cart
+    Product
   },
   computed: mapGetters(["getInventory", "getShoppingCartLength"])
 };

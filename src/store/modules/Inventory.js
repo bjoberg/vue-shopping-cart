@@ -31,7 +31,6 @@ const getters = {
     return state.inventory;
   },
   getInventoryById: (state) => (id) => {
-    console.log(id);
     return state.inventory.find(inventory => inventory.id === id)
   },
   getFormattedPrice: (state, getters) => (id) => {

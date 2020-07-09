@@ -2,8 +2,8 @@
   <div class="product-action-buttons">
     <button
       @click="handleAddToCart"
-      :disabled="inventory === 0"
-      :class="{disabledButton: inventory === 0 }"
+      :disabled="inventoryCount === 0"
+      :class="{disabledButton: inventoryCount === 0 }"
       class="buttonPrimary"
     >Add</button>
     <button
@@ -18,6 +18,16 @@
 <script>
 export default {
   name: "ProductActionButtons",
+  props: {
+    shoppingCartTotalItems: {
+      type: Number,
+      required: true
+    },
+    inventoryCount: {
+      type: Number,
+      required: true
+    }
+  },
   methods: {
     handleAddToCart() {
       this.$emit("push-to-cart");

@@ -16,7 +16,12 @@
 
       <ProductVariants :variants="product.variants" @update-product-image="updateInventoryImage" />
 
-      <ProductActionButtons @push-to-cart="pushItemToCart" @pop-from-cart="popItemFromCart" />
+      <ProductActionButtons
+        :inventoryCount="product.count"
+        :shoppingCartTotalItems="shoppingCartTotalItems"
+        @push-to-cart="pushItemToCart"
+        @pop-from-cart="popItemFromCart"
+      />
     </div>
   </div>
 </template>
