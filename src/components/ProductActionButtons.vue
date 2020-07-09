@@ -15,7 +15,15 @@
 
 <script>
 export default {
-  name: "ProductActionButtons"
+  name: "ProductActionButtons",
+  methods: {
+    handleAddToCart() {
+      this.$emit("push-to-cart");
+    },
+    handleRemoveFromCart() {
+      this.$emit("pop-from-cart");
+    }
+  }
 };
 </script>
 

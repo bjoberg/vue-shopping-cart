@@ -15,7 +15,7 @@
 
       <ProductVariants :variants="product.variants" />
 
-      <ProductActionButtons />
+      <ProductActionButtons @push-to-cart="pushItemToCart" @pop-from-cart="popItemFromCart" />
     </div>
   </div>
 </template>
@@ -45,14 +45,14 @@ export default {
     }
   },
   methods: {
-    handleAddToCart() {
-      this.$emit("add-to-cart");
-    },
-    handleRemoveFromCart() {
-      this.$emit("remove-from-cart");
-    },
     handleUpdateProductImage(productImage) {
       this.image = productImage;
+    },
+    pushItemToCart() {
+      this.$store.commit("pushItemToCart", this.product);
+    },
+    popItemFromCart() {
+      this.$store.commit("popItemFromCart");
     }
   },
   computed: {

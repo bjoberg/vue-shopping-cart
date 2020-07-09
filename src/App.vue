@@ -7,14 +7,12 @@
       :key="inventory.id"
       :product="inventory"
       :shoppingCartTotalItems="getShoppingCartLength"
-      @add-to-cart="pushItemToCart"
-      @remove-from-cart="popItemFromCart"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 
 import NavBar from "./components/NavBar.vue";
 import Product from "./components/Product.vue";
@@ -27,7 +25,6 @@ export default {
     Product,
     Cart
   },
-  methods: mapMutations(["pushItemToCart", "popItemFromCart"]),
   computed: mapGetters(["getInventory", "getShoppingCartLength"])
 };
 </script>
