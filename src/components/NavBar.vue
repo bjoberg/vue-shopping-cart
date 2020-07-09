@@ -1,10 +1,17 @@
 <template>
-  <div class="nav-bar" />
+  <div class="nav-bar">
+    <Cart />
+  </div>
 </template>
 
 <script>
+import Cart from "./Cart";
+
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  components: {
+    Cart
+  }
 };
 </script>
 

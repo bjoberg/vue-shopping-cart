@@ -1,19 +1,15 @@
 <template>
   <div class="cart">
-    <p>Cart {{ totalItems }}</p>
+    <p>Cart {{ getShoppingCartLength }}</p>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "Cart",
-  props: {
-    totalItems: {
-      type: Number,
-      required: false,
-      default: 0
-    }
-  }
+  computed: mapGetters(["getShoppingCartLength"])
 };
 </script>
 
@@ -21,7 +17,6 @@ export default {
 .cart {
   margin-right: 25px;
   float: right;
-  border: 1px solid #d8d8d8;
   padding: 5px 20px;
 }
 </style>
