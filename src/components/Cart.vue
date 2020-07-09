@@ -1,6 +1,8 @@
 <template>
   <div class="cart">
-    <p>Cart {{ getShoppingCartLength }}</p>
+    <p>
+      <router-link to="cart">Cart {{ getShoppingCartLength }}</router-link>
+    </p>
   </div>
 </template>
 
