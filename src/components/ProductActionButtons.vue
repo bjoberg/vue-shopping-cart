@@ -4,11 +4,13 @@
       @click="handleAddToCart"
       :disabled="inventory === 0"
       :class="{disabledButton: inventory === 0 }"
+      class="buttonPrimary"
     >Add</button>
     <button
       @click="handleRemoveFromCart"
       :disabled="shoppingCartTotalItems === 0"
       :class="{disabledButton: shoppingCartTotalItems === 0 }"
+      class="buttonError"
     >Remove</button>
   </div>
 </template>
@@ -29,13 +31,24 @@ export default {
 
 <style>
 button {
+  border-radius: 20px;
   margin-top: 30px;
+  margin-right: 10px;
   border: none;
-  background-color: #1e95ea;
   color: white;
   height: 40px;
   width: 100px;
   font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonPrimary {
+  background-color: #1e95ea;
+}
+
+.buttonError {
+  background-color: #ea361e;
 }
 
 .disabledButton {

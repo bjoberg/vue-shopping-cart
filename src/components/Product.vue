@@ -11,6 +11,7 @@
         :inStock="inStock"
         :inventoryCount="product.count"
         :itemDetails="product.details"
+        :category="product.category"
       />
 
       <ProductVariants :variants="product.variants" @update-product-image="updateInventoryImage" />

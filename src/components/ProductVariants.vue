@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="product-variants-container">
     <div
       class="color-box"
       :style="{ backgroundColor: variant.color}"
       v-for="variant in variants"
       :key="variant.id"
-      @mouseover="handleUpdateProductImage(variant.image)"
+      @click="handleUpdateProductImage(variant.image)"
     ></div>
   </div>
 </template>
@@ -31,9 +31,19 @@ export default {
 </script>
 
 <style>
+.product-variants-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
 .color-box {
   width: 40px;
   height: 40px;
-  margin-top: 5px;
+  margin-right: 10px;
+  border-radius: 40px;
+}
+
+.color-box:hover {
+  cursor: pointer;
 }
 </style>
