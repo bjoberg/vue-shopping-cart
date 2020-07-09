@@ -1,14 +1,17 @@
 const state = {
-  totalItems: 0
+  cart: []
 };
 
 const getters = {
-  getShoppingCartTotalItems: (state) => state.totalItems
+  getShoppingCartLength: state => state.cart.length
 };
 
 const actions = {};
 
-const mutations = {};
+const mutations = {
+  pushItemToCart: (state, item) => state.cart.push(item),
+  popItemFromCart: (state) => state.cart.pop()
+};
 
 export default {
   state,

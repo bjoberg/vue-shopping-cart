@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <NavBar />
-    <Cart :totalItems="getShoppingCartTotalItems" />
+    <Cart :totalItems="getShoppingCartLength" />
     <Product
-      :premium="premium"
-      :cart="cart"
-      @add-to-cart="addToCart"
-      @remove-from-cart="removeFromCart"
+      v-for="inventory in getInventory"
+      :key="inventory.id"
+      :product="inventory"
+      :shoppingCartTotalItems="getShoppingCartLength"
+      @add-to-cart="pushItemToCart"
+      @remove-from-cart="popItemFromCart"
     />
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 import NavBar from "./components/NavBar.vue";
 import Product from "./components/Product.vue";
@@ -25,21 +27,8 @@ export default {
     Product,
     Cart
   },
-  data: function() {
-    return {
-      premium: true,
-      cart: 0
-    };
-  },
-  methods: {
-    addToCart() {
-      this.cart += 1;
-    },
-    removeFromCart() {
-      this.cart -= 1;
-    }
-  },
-  computed: mapGetters(["getShoppingCartTotalItems"])
+  methods: mapMutations(["pushItemToCart", "popItemFromCart"]),
+  computed: mapGetters(["getInventory", "getShoppingCartLength"])
 };
 </script>
 
