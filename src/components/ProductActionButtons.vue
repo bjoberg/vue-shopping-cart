@@ -1,21 +1,23 @@
 <template>
-  <div class="product-action-buttons">
-    <button
-      @click="handleAddToCart"
-      :disabled="inventoryCount === 0"
-      :class="{disabledButton: inventoryCount === 0 }"
-      class="buttonPrimary"
-    >Add</button>
-    <button
-      @click="handleRemoveFromCart"
-      :disabled="shoppingCartTotalItems === 0"
-      :class="{disabledButton: shoppingCartTotalItems === 0 }"
-      class="buttonError"
-    >Remove</button>
+  <div class="product-action-buttons-container">
+    <Button
+      @on-click="handleAddToCart"
+      :isDisabled="inventoryCount === 0"
+      variant="primary"
+      title="Add"
+    />
+    <Button
+      @on-click="handleRemoveFromCart"
+      :isDisabled="shoppingCartTotalItems === 0"
+      variant="secondary"
+      title="Remove"
+    />
   </div>
 </template>
 
 <script>
+import Button from "./Button";
+
 export default {
   name: "ProductActionButtons",
   props: {
@@ -27,6 +29,9 @@ export default {
       type: Number,
       required: true
     }
+  },
+  components: {
+    Button
   },
   methods: {
     handleAddToCart() {
@@ -40,28 +45,12 @@ export default {
 </script>
 
 <style>
-button {
-  border-radius: 20px;
-  margin-top: 30px;
-  margin-right: 10px;
-  border: none;
-  color: white;
-  height: 40px;
-  width: 100px;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
+.product-action-buttons-container {
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
 }
-
-.buttonPrimary {
-  background-color: #1e95ea;
-}
-
-.buttonError {
-  background-color: #ea361e;
-}
-
-.disabledButton {
-  background-color: #d8d8d8;
+.product-action-buttons-container > * {
+  margin: 0px 10px 0 0;
 }
 </style>
