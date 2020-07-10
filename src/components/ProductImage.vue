@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :alt="title" :src="imageSrc" />
+    <img class="product-image" :alt="title" :src="imageSrc" />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style>
-img {
+img.product-image {
   border: 1px solid #d8d8d8;
   width: 70%;
   margin: 40px;

@@ -3,6 +3,7 @@ const state = {
 };
 
 const getters = {
+  getShoppingCart: state => state.cart,
   getShoppingCartLength: state => state.cart.length
 };
 
