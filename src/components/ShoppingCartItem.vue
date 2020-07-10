@@ -32,13 +32,13 @@ export default {
 .shopping-cart-item-container {
   display: flex;
   flex-direction: row;
-  margin: 40px;
-  border: 1px solid black;
+  margin: 4rem;
+  border: 0.1rem solid black;
 }
 img.shopping-cart-item-image {
-  border: 1px solid #d8d8d8;
-  max-width: 200px;
-  margin: 40px;
-  box-shadow: 0px 0.5px 1px #d8d8d8;
+  border: 0.1rem solid #d8d8d8;
+  max-width: 20rem;
+  margin: 4rem;
+  box-shadow: 0 0.05rem 0.1rem #d8d8d8;
 }
 </style>

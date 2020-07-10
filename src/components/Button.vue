@@ -59,14 +59,14 @@ export default {
 
 <style>
 button {
-  min-width: 100px;
-  max-width: 250px;
+  min-width: 10rem;
+  max-width: 25rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: none;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 2rem;
   cursor: pointer;
   outline: none;
 }
@@ -80,9 +80,9 @@ button {
   background: repeating-linear-gradient(
     45deg,
     #1e95ea,
-    #1e95ea 10px,
-    #1376bd 10px,
-    #1376bd 20px
+    #1e95ea 1rem,
+    #1376bd 1rem,
+    #1376bd 2rem
   );
 }
 
@@ -95,9 +95,9 @@ button {
   background: repeating-linear-gradient(
     90deg,
     #ea361e,
-    #ea361e 10px,
-    #b42411 10px,
-    #b42411 20px
+    #ea361e 1rem,
+    #b42411 1rem,
+    #b42411 2rem
   );
 }
 

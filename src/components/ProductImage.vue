@@ -22,9 +22,9 @@ export default {
 
 <style>
 img.product-image {
-  border: 1px solid #d8d8d8;
+  border: 0.1rem solid #d8d8d8;
   width: 70%;
-  margin: 40px;
-  box-shadow: 0px 0.5px 1px #d8d8d8;
+  margin: 4rem;
+  box-shadow: 0 0.05rem 0.1rem #d8d8d8;
 }
 </style>

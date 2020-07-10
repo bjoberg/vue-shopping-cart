@@ -16,10 +16,10 @@ export default {
 
 <style>
 .chip {
-  border-radius: 30px;
+  border-radius: 3rem;
   text-align: center;
-  padding: 4px;
-  width: 100px;
+  padding: 0.4rem;
+  width: 10rem;
   background-color: #16c0b0;
   color: white;
 }

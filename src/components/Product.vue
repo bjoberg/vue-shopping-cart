@@ -94,7 +94,7 @@ export default {
 
 .product-image,
 .product-info {
-  margin-top: 10px;
+  margin-top: 1rem;
   width: 50%;
 }
 </style>

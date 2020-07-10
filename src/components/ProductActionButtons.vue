@@ -46,11 +46,11 @@ export default {
 
 <style>
 .product-action-buttons-container {
-  margin: 20px 0px 20px 0px;
+  margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: row;
 }
 .product-action-buttons-container > * {
-  margin: 0px 10px 0 0;
+  margin: 0 1rem 0 0;
 }
 </style>
