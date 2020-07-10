@@ -1,7 +1,12 @@
 <template>
   <button
     @click="handleOnClick"
-    :class="{primary: isPrimary, secondary: isSecondary, disabled: isDisabled}"
+    :class="{
+      primary: isPrimary, 
+      secondary: isSecondary, 
+      disabled: isDisabled, 
+      colorBlindMode: enableColorBlindMode
+    }"
     :disabled="isDisabled"
   >{{title}}</button>
 </template>
@@ -19,6 +24,13 @@ export default {
       required: false,
       default() {
         return "primary";
+      }
+    },
+    enableColorBlindMode: {
+      type: Boolean,
+      required: false,
+      default() {
+        false;
       }
     },
     isDisabled: {
@@ -64,9 +76,29 @@ button {
   color: white;
 }
 
+.primary.colorBlindMode {
+  background: repeating-linear-gradient(
+    45deg,
+    #1e95ea,
+    #1e95ea 10px,
+    #1376bd 10px,
+    #1376bd 20px
+  );
+}
+
 .secondary {
   background-color: #ea361e;
   color: white;
+}
+
+.secondary.colorBlindMode {
+  background: repeating-linear-gradient(
+    90deg,
+    #ea361e,
+    #ea361e 10px,
+    #b42411 10px,
+    #b42411 20px
+  );
 }
 
 .disabled {
