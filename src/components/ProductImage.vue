@@ -20,11 +20,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 img.product-image {
-  border: 0.1rem solid #d8d8d8;
+  border: pxToRem(1) solid #d8d8d8;
   width: 70%;
-  margin: 4rem;
-  box-shadow: 0 0.05rem 0.1rem #d8d8d8;
+  margin: pxToRem(4);
+  box-shadow: pxToRem(0) pxToRem(0.5) pxToRem(1) #d8d8d8;
 }
 </style>

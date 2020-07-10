@@ -81,11 +81,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .product {
   display: flex;
   flex-flow: wrap;
-  padding: 1rem;
+  padding: pxToRem(10);
 }
 
 .product-image {
@@ -94,7 +94,7 @@ export default {
 
 .product-image,
 .product-info {
-  margin-top: 1rem;
+  margin-top: pxToRem(10);
   width: 50%;
 }
 </style>

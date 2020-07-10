@@ -17,10 +17,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 body {
   font-family: tahoma;
   color: #282828;
-  margin: 0;
+  margin: pxToRem(0);
 }
 </style>

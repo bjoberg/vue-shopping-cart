@@ -28,17 +28,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .shopping-cart-item-container {
   display: flex;
   flex-direction: row;
-  margin: 4rem;
-  border: 0.1rem solid black;
+  margin: pxToRem(40);
+  border: pxToRem(1) solid black;
 }
 img.shopping-cart-item-image {
-  border: 0.1rem solid #d8d8d8;
-  max-width: 20rem;
-  margin: 4rem;
-  box-shadow: 0 0.05rem 0.1rem #d8d8d8;
+  border: pxToRem(1) solid #d8d8d8;
+  max-width: pxToRem(200);
+  margin: pxToRem(40);
+  box-shadow: pxToRem(0) pxToRem(0.5) pxToRem(1) #d8d8d8;
 }
 </style>

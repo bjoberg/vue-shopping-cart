@@ -44,13 +44,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .product-action-buttons-container {
-  margin: 2rem 0 2rem 0;
+  margin: pxToRem(20) pxToRem(0) pxToRem(20) pxToRem(0);
   display: flex;
   flex-direction: row;
 }
 .product-action-buttons-container > * {
-  margin: 0 1rem 0 0;
+  margin: pxToRem(0) pxToRem(10) pxToRem(0) pxToRem(0);
 }
 </style>

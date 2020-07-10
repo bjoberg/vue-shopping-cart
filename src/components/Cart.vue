@@ -15,10 +15,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .cart {
-  margin-right: 2.5rem;
+  margin-right: pxToRem(25);
   float: right;
-  padding: 0.5rem 2rem;
+  padding: pxToRem(5) pxToRem(20);
 }
 </style>

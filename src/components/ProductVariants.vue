@@ -30,17 +30,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .product-variants-container {
   display: flex;
   flex-direction: row;
-  margin-top: 0.5rem;
+  margin-top: pxToRem(5);
 }
 .color-box {
-  width: 4rem;
-  height: 4rem;
-  margin-right: 1rem;
-  border-radius: 4rem;
+  width: pxToRem(40);
+  height: pxToRem(40);
+  margin-right: pxToRem(1);
+  border-radius: pxToRem(40);
 }
 
 .color-box:hover {

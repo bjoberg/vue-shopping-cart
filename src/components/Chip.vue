@@ -14,12 +14,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .chip {
-  border-radius: 3rem;
+  border-radius: pxToRem(30);
   text-align: center;
-  padding: 0.4rem;
-  width: 10rem;
+  padding: pxToRem(4);
+  width: pxToRem(100);
   background-color: #16c0b0;
   color: white;
 }

@@ -57,47 +57,47 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 button {
-  min-width: 10rem;
-  max-width: 25rem;
+  min-width: pxToRem(100);
+  max-width: pxToRem(250);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: none;
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 2rem;
+  padding: pxToRem(10) pxToRem(20) pxToRem(10) pxToRem(20);
+  border-radius: pxToRem(20);
   cursor: pointer;
   outline: none;
 }
 
 .primary {
-  background-color: #1e95ea;
-  color: white;
+  background-color: map-get($primary, "main");
+  color: map-get($primary, "contrastText");
 }
 
 .primary.colorBlindMode {
   background: repeating-linear-gradient(
     45deg,
-    #1e95ea,
-    #1e95ea 1rem,
-    #1376bd 1rem,
-    #1376bd 2rem
+    map-get($primary, "main"),
+    map-get($primary, "main") pxToRem(10),
+    map-get($primary, "dark") pxToRem(10),
+    map-get($primary, "dark") pxToRem(20)
   );
 }
 
 .secondary {
-  background-color: #ea361e;
-  color: white;
+  background-color: map-get($secondary, "main");
+  color: map-get($secondary, "contrastText");
 }
 
 .secondary.colorBlindMode {
   background: repeating-linear-gradient(
     90deg,
-    #ea361e,
-    #ea361e 1rem,
-    #b42411 1rem,
-    #b42411 2rem
+    map-get($secondary, "main"),
+    map-get($secondary, "main") pxToRem(10),
+    map-get($secondary, "dark") pxToRem(10),
+    map-get($secondary, "dark") pxToRem(20)
   );
 }
 
