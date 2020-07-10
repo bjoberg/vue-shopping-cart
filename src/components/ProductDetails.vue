@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <div class="chip">{{category}}</div>
+    <Chip :title="category" />
     <p>{{price}}</p>
     <p v-if="inStock">In stock</p>
     <p v-else>Out of stock</p>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import Chip from "./Chip.vue";
+
 export default {
   name: "ProductDetails",
   props: {
@@ -44,17 +46,7 @@ export default {
       type: Number,
       required: true
     }
-  }
+  },
+  components: { Chip }
 };
 </script>
-
-<style scoped>
-.chip {
-  border-radius: 30px;
-  text-align: center;
-  padding: 4px;
-  color: white;
-  background-color: #16c0b0;
-  width: 100px;
-}
-</style>
